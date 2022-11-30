@@ -1,0 +1,41 @@
+<!-- Vineet Kasat  -->
+<!-- This is the HTML header file for the landing page of the assignment. There are two links. A survey form for students and a list of all surveys -->
+<div *ngFor="let student of students">
+    <div>{{student.name}}</div>
+    </div>
+    <p *ngIf="students==null">Wait a sec...</p>
+<table *ngIf="students!=null">
+    <tr>
+
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zipcode</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Date of Survey</th>
+        <th>Liked about Campus</th>
+        <th>Interest in campus</th>
+        <th>Recommendation</th>
+    </tr>
+
+    <tr *ngFor="let index of students">
+        <td>{{index?.fname}}</td>
+        <td>{{index?.lname}}</td>
+        <td>{{index?.streetaddress}}</td>
+        <td>{{index?.city}}</td>
+        <td>{{index?.state}}</td>
+        <td>{{index?.zipcode}}</td>
+        <td>{{index?.telephone}}</td>
+        <td>{{index?.email}}</td>
+        <td>{{index?.surveydate}}</td>
+        <td>{{index?.likemost}}</td>
+        <td>{{index?.interestInUniversity}}</td>
+        <td>{{index?.recommend}}</td>
+       </tr>
+       
+</table>
+<a routerLink="/survey">Student Survey Form</a> <br>
+<a routerLink="/list">List all of the surveys that were submitted.</a><br>
